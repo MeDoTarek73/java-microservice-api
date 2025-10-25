@@ -51,4 +51,3 @@ jobs:
           docker build -t $IMAGE_NAME -f src/main/docker/Dockerfile.jvm .
           docker push $IMAGE_NAME
           echo "✅ Image pushed: $IMAGE_NAME"
-          echo "Image location: https://github.com/${{ github.repository }}/pkgs/container/java-microservice-api"

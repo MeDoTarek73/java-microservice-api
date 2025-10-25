@@ -80,6 +80,11 @@
 ###
 FROM registry.access.redhat.com/ubi9/openjdk-21:1.23
 
+# Add labels for GitHub Container Registry
+LABEL org.opencontainers.image.description="Java Microservice API"
+LABEL org.opencontainers.image.licenses="MIT"
+LABEL org.opencontainers.image.vendor="MeDoTarek73"
+
 ENV LANGUAGE='en_US:en'
 
 
