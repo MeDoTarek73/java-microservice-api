@@ -98,7 +98,7 @@ jobs:
         context: .
         file: src/main/docker/Dockerfile.jvm
         push: true
-        tags: ghcr.io/${{ github.repository }}:${{ steps.branch.outputs.image_tag }}
+        tags: ghcr.io/medotarek73/java-microservice-api:${{ steps.branch.outputs.image_tag }}
         cache-from: type=gha
         cache-to: type=gha,mode=max
 
@@ -142,7 +142,7 @@ jobs:
     - name: Update backend deployments
       if: steps.discover.outputs.found == 'true'
       run: |
-        IMAGE="ghcr.io/${{ github.repository }}:${{ steps.branch.outputs.image_tag }}"
+        IMAGE="ghcr.io/medotarek73/java-microservice-api:${{ steps.branch.outputs.image_tag }}"
 
         for NS in ${{ steps.discover.outputs.namespaces }}; do
           echo "🚀 Updating backend in namespace: $NS"
