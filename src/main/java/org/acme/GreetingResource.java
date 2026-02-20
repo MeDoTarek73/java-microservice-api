@@ -11,6 +11,6 @@ public class GreetingResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return "Hello from REST API - From feature/activation-fee";
+        return "Hello from REST API - From pre-test";
     }
 }
