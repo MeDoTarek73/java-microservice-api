@@ -131,6 +131,8 @@ jobs:
           echo "✅ No preview environment exists yet — skipping deployment."
           echo "found=false" >> $GITHUB_OUTPUT
           exit 0
+        else
+          echo "✅ Found preview environment: $NAMESPACES"
         fi
 
         echo "found=true" >> $GITHUB_OUTPUT
